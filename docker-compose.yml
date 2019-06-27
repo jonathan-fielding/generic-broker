@@ -1,0 +1,10 @@
+version: "2"
+services:
+  app:
+    container_name: leaf-api
+    restart: always
+    build: .
+    ports:
+      - "4000:8080"
+    links:
+      - mongo
