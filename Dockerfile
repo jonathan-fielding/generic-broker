@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:12
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -18,5 +18,4 @@ RUN npm run build-ts
 # Bundle app source
 COPY . .
 
-EXPOSE 8080
 CMD [ "npm", "start" ]

@@ -11,12 +11,12 @@ socket.on('connect', function () {
 });
 
 socket.on('request', function({ requestId, path }) {
-    fetch(`${config.internal_host}${path}`).then(res => res.json()).then(response => {
+    fetch(`${config.internal_host}${path}`).then((res: { json: () => void; }) => res.json()).then((response: any) => {
         socket.emit('response', {
             requestId,
             response,
         });
-    }).catch(response => {
+    }).catch((response: any) => {
         socket.emit('response', {
             requestId,
             response,
