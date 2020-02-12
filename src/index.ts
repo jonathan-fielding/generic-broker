@@ -1,4 +1,3 @@
-const configPath = process.env.BROKER_CONFIG || '../config.json';
 const io = require('socket.io-client');
 const socket = io(process.env.SERVER_URL);
 import fetch from 'node-fetch';
