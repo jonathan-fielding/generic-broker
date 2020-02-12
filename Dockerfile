@@ -12,10 +12,10 @@ RUN npm install
 # If you are building your code for production
 # RUN npm install --only=production
 
-# Build typescript
-RUN npm run build-ts
-
 # Bundle app source
 COPY . .
+
+# Build typescript
+RUN npm run build-ts
 
 CMD [ "npm", "start" ]
